@@ -290,6 +290,7 @@
 							<trimStackTrace>false</trimStackTrace>
 							<includes>
 								<include>**/*Test.java</include>
+								<include>**/MessageComponentTestFixLatest.java</include>
 								<include>${acceptance.tests}</include>
 							</includes>
 							<excludes>
@@ -327,6 +328,7 @@
 							<trimStackTrace>false</trimStackTrace>
 							<includes>
 								<include>**/*Test.java</include>
+								<include>**/MessageComponentTestFixLatest.java</include>
 								<include>${acceptance.tests}</include>
 							</includes>
 							<excludes>
