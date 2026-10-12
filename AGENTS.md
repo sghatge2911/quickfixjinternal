@@ -18,9 +18,9 @@ This file provides guidance for automated contributors/agents working in the `qu
 
 - Fast local package (no tests):
   - `./mvnw clean package -Dmaven.javadoc.skip=true -DskipTests -PskipBundlePlugin,minimal-fix-latest`
-- CI-equivalent validation baseline:
-  - `./mvnw install -Dmaven.javadoc.skip=true -PskipBundlePlugin,minimal-fix-latest`
-- If OSGi bundle artifacts are required, omit `-PskipBundlePlugin`.
+- CI-equivalent validation baseline (includes OSGi bundle packaging):
+  - `./mvnw install -Dmaven.javadoc.skip=true -Pminimal-fix-latest`
+- To skip OSGi bundle packaging, add `-PskipBundlePlugin`.
 
 ## 4) Module dependency order for targeted `quickfixj-core` work
 
