@@ -11,8 +11,8 @@ This file provides guidance for automated contributors/agents working in the `qu
 ## 2) Environment
 
 - Use the repository Maven wrapper: `./mvnw` (or `./mvnw.cmd` on Windows), not system Maven.
-- Java compatibility target is Java 8 (`maven.compiler.source=8`, `maven.compiler.target=8`).
-- CI validates multiple Java versions and OSes (JDK 8/11/21 on Linux, macOS, and Windows).
+- Java compatibility target is Java 17 (`maven.compiler.source=17`, `maven.compiler.target=17`, `maven.compiler.release=17`).
+- CI validates multiple Java versions and OSes (JDK 17/21 on Linux, macOS, and Windows).
 
 ## 3) Build instructions (fast/default/full)
 

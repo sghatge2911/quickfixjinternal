@@ -60,13 +60,14 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<jdkLevel>1.8</jdkLevel>
+		<jdkLevel>17</jdkLevel>
 		<slf4j.version>2.0.20</slf4j.version>
 		<mockito-core.version>4.11.0</mockito-core.version>
 		<hamcrest.version>3.0</hamcrest.version>
 		<junit.jupiter.version>5.14.4</junit.jupiter.version>
-		<maven.compiler.source>8</maven.compiler.source>
-		<maven.compiler.target>8</maven.compiler.target>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+		<maven.compiler.release>17</maven.compiler.release>
 		<mainClass />
         <maven.version>3.9.12</maven.version>
 		<maven-resources-plugin-version>3.5.0</maven-resources-plugin-version>
@@ -448,6 +449,9 @@
 								<requireMavenVersion>
 									<version>${maven.version}</version>
 								</requireMavenVersion>
+								<requireJavaVersion>
+									<version>[17,)</version>
+								</requireJavaVersion>
 							</rules>
 						</configuration>
 					</execution>
@@ -530,15 +534,6 @@
 					</plugin>
 				</plugins>
 			</build>
-		</profile>
-		<profile>
-			<id>java-8-compilation</id>
-			<activation>
-			<jdk>[9,)</jdk>
-			</activation>
-			<properties>
-				<maven.compiler.release>8</maven.compiler.release>
-			</properties>
 		</profile>
 	</profiles>
 	<distributionManagement>

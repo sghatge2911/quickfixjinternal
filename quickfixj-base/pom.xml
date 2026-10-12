@@ -187,7 +187,7 @@
 							<!-- Uncomment this to skip execution as this module requires more than 9gb memory -->
 							<!--  skip>true</skip -->
 							<quiet>true</quiet>
-							<source>8</source>
+							<source>17</source>
 							<sourcepath>src/main/java:${project.build.directory}/generated-sources</sourcepath>
 							<excludePackageNames>quickfix.fixt11:quickfix.fixlatest</excludePackageNames>
 						</configuration>
@@ -226,37 +226,11 @@
 	</reporting>
 
 	<profiles>
-		<!-- select different java options on JDK8 for surefire since otherwise the build will fail -->
-		<profile>
-			<id>surefire-java8</id>
-			<activation>
-				<jdk>1.8</jdk>
-			</activation>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-surefire-plugin</artifactId>
-						<configuration>
-							<argLine>
-							</argLine>
-							<trimStackTrace>false</trimStackTrace>
-							<includes>
-							</includes>
-							<excludes>
-							</excludes>
-							<systemPropertyVariables>
-							</systemPropertyVariables>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-		<!-- surefire for JDK9 and upwards -->
+		<!-- surefire for JDK17 and upwards -->
 		<profile>
 			<id>surefire</id>
 			<activation>
-				<jdk>[1.9,)</jdk>
+				<jdk>[17,)</jdk>
 			</activation>
 			<build>
 				<plugins>
