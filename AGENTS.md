@@ -11,16 +11,16 @@ This file provides guidance for automated contributors/agents working in the `qu
 ## 2) Environment
 
 - Use the repository Maven wrapper: `./mvnw` (or `./mvnw.cmd` on Windows), not system Maven.
-- Java compatibility target is Java 8 (`maven.compiler.source=8`, `maven.compiler.target=8`).
-- CI validates multiple Java versions and OSes (JDK 8/11/21 on Linux, macOS, and Windows).
+- Java compatibility target is Java 17 (`maven.compiler.source=17`, `maven.compiler.target=17`, `maven.compiler.release=17`).
+- CI validates multiple Java versions and OSes (JDK 17/21 on Linux, macOS, and Windows).
 
 ## 3) Build instructions (fast/default/full)
 
 - Fast local package (no tests):
   - `./mvnw clean package -Dmaven.javadoc.skip=true -DskipTests -PskipBundlePlugin,minimal-fix-latest`
-- CI-equivalent validation baseline:
-  - `./mvnw install -Dmaven.javadoc.skip=true -PskipBundlePlugin,minimal-fix-latest`
-- If OSGi bundle artifacts are required, omit `-PskipBundlePlugin`.
+- CI-equivalent validation baseline (includes OSGi bundle packaging):
+  - `./mvnw install -Dmaven.javadoc.skip=true -Pminimal-fix-latest`
+- To skip OSGi bundle packaging, add `-PskipBundlePlugin`.
 
 ## 4) Module dependency order for targeted `quickfixj-core` work
 

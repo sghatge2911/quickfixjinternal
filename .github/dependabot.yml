@@ -15,8 +15,6 @@ updates:
         versions: [">=6.a0", "<7"]
       - dependency-name: "org.junit.vintage:junit-vintage-engine"
         versions: [">=6.a0", "<7"]
-      - dependency-name: "org.mockito:mockito-core"
-        versions: [">=5.a", "<6"]
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:

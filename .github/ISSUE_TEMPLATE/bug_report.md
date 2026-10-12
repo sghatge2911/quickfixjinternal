@@ -19,7 +19,7 @@ A clear and concise description of what you expected to happen.
 
 **system information:**
  - OS: [e.g. Linux]
- - Java version [e.g. JDK8]
+ - Java version [e.g. JDK17]
  - QFJ Version [e.g. 2.1.1]
 
 **Additional context**
