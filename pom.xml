@@ -62,7 +62,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<jdkLevel>17</jdkLevel>
 		<slf4j.version>2.0.20</slf4j.version>
-		<mockito-core.version>4.11.0</mockito-core.version>
+		<mockito-core.version>5.24.0</mockito-core.version>
 		<hamcrest.version>3.0</hamcrest.version>
 		<junit.jupiter.version>5.14.4</junit.jupiter.version>
 		<maven.compiler.source>17</maven.compiler.source>
